@@ -21,7 +21,7 @@ namespace LiveSplit.DodgeballAcademia {
             memory = new DodgeballAcademiaMemory(logger);
 
             settings = new TreeSettings(state, StartSettings, ResetSettings, OptionsSettings);
-            
+
             remainingSplits = new RemainingDictionary(logger);
         }
 

@@ -2,6 +2,7 @@
 <!DOCTYPE Presets [
   <!ENTITY T "Tracker_">
   <!ENTITY TT "TransitionText_">
+  <!ENTITY M "Match_">
 ]>
 <Presets>
   <Preset name="Default">
