@@ -616,4 +616,39 @@
   <Parent name="sqDailyChallenger" text="The Daily Challenge">
     <Split name="&T;quest_sqDailyChallenger_task_defeat_2" text="Defeat the challenger every day!"/>
   </Parent>
+
+  <Empty name="MiniGames" text=" - - Mini Games - - "/>
+  <Parent name="Kat" text="Dodging Challenge">
+    <Split name="&M;minigame_1-0_start" text="Easy (begin)"/>
+    <Split name="&M;minigame_1-0_end"   text="Easy (end)"/>
+    <Split name="&M;minigame_1-0_rank4" text="Easy (S-Rank)"/>
+    <Split name="&M;minigame_1-1_start" text="Normal (begin)"/>
+    <Split name="&M;minigame_1-1_end"   text="Normal (end)"/>
+    <Split name="&M;minigame_1-1_rank4" text="Normal (S-Rank)"/>
+    <Split name="&M;minigame_1-2_start" text="Hard (begin)"/>
+    <Split name="&M;minigame_1-2_end"   text="Hard (end)"/>
+    <Split name="&M;minigame_1-2_rank4" text="Hard (S-Rank)"/>
+  </Parent>
+  <Parent name="Kako" text="Destruction Challenge">
+    <Split name="&M;minigame_3-0_start" text="Easy (begin)"/>
+    <Split name="&M;minigame_3-0_end"   text="Easy (end)"/>
+    <Split name="&M;minigame_3-0_rank4" text="Easy (S-Rank)"/>
+    <Split name="&M;minigame_3-1_start" text="Normal (begin)"/>
+    <Split name="&M;minigame_3-1_end"   text="Normal (end)"/>
+    <Split name="&M;minigame_3-1_rank4" text="Normal (S-Rank)"/>
+    <Split name="&M;minigame_3-2_start" text="Hard (begin)"/>
+    <Split name="&M;minigame_3-2_end"   text="Hard (end)"/>
+    <Split name="&M;minigame_3-2_rank4" text="Hard (S-Rank)"/>
+  </Parent>
+  <Parent name="Fortunato" text="Defense Challenge">
+    <Split name="&M;minigame_2-0_start" text="Easy (begin)"/>
+    <Split name="&M;minigame_2-0_end"   text="Easy (end)"/>
+    <Split name="&M;minigame_2-0_rank4" text="Easy (S-Rank)"/>
+    <Split name="&M;minigame_2-1_start" text="Normal (begin)"/>
+    <Split name="&M;minigame_2-1_end"   text="Normal (end)"/>
+    <Split name="&M;minigame_2-1_rank4" text="Normal (S-Rank)"/>
+    <Split name="&M;minigame_2-2_start" text="Hard (begin)"/>
+    <Split name="&M;minigame_2-2_end"   text="Hard (end)"/>
+    <Split name="&M;minigame_2-2_rank4" text="Hard (S-Rank)"/>
+  </Parent>
 </Splits>
