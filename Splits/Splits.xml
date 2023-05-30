@@ -651,4 +651,90 @@
     <Split name="&M;minigame_2-2_end"   text="Hard (end)"/>
     <Split name="&M;minigame_2-2_rank4" text="Hard (S-Rank)"/>
   </Parent>
+
+  <Empty name="Chests" text=" - - Chests - - "/>
+  <Parent name="SchoolGrounds" text="School Grounds">
+    <Split name="&T;tChest_schoolgrounds1_1" text="Chest School Grounds 1"/>
+    <Split name="&T;tChest_schoolgrounds2_1" text="Chest School Grounds 2"/>
+    <Split name="&T;tChest_schoolgrounds3_1" text="Chest School Grounds 3"/>
+    <Split name="&T;tChest_schoolgrounds4_1" text="Chest School Grounds 4"/>
+    <Split name="&T;tChest_schoolgrounds5_1" text="Chest School Grounds 5"/>
+    <Split name="&T;tChest_schoolgrounds6_1" text="Chest School Grounds 6"/>
+    <Split name="&T;tChest_schoolgrounds7_1" text="Chest School Grounds 7"/>
+    <Split name="&T;tChest_schoolgrounds8_1" text="Chest School Grounds 8"/>
+    <Split name="&T;tChest_schoolgrounds9_1" text="Chest School Grounds 9"/>
+    <Split name="&T;tChest_schoolgrounds10_1" text="Chest School Grounds 10"/>
+    <Split name="&T;tChest_schoolgrounds11_1" text="Chest School Grounds 11"/>
+    <Split name="&T;tChest_schoolgrounds12_1" text="Chest School Grounds 12"/>
+    <Split name="&T;tChest_schoolgrounds13_1" text="Chest School Grounds 13"/>
+    <Split name="&T;tChest_schoolgrounds14_1" text="Chest School Grounds 14"/>
+    <Split name="&T;tChest_schoolgrounds15_1" text="Chest School Grounds 15"/>
+    <Split name="&T;tChest_schoolgrounds16_1" text="Chest School Grounds 16"/>
+    <Split name="&T;tChest_schoolgrounds17_1" text="Chest School Grounds 17"/>
+    <Split name="&T;tChest_schoolgroundsOob1_1" text="Chest School Grounds OOB"/>
+    <Split name="&T;tChest_kat_1_1" text="Chest Kat's Classroom"/>
+    <Split name="&T;tChest_kako1_1" text="Chest Ma'Kako's Classroom 1"/>
+    <Split name="&T;tChest_kako2_1" text="Chest Ma'Kako's Classroom 2"/>
+    <Split name="&T;tChest_rooftop1_1" text="Chest Academy Rooftop 1"/>
+    <Split name="&T;tChest_rooftop2_1" text="Chest Academy Rooftop 2"/>
+    <Split name="&T;tChest_infirmary_1_1" text="Chest Infirmary 1"/>
+    <Split name="&T;tChest_infirmary_2_1" text="Chest Infirmary 2"/>
+    <Split name="&T;tChest_dome1_1" text="Chest Dome 1"/>
+    <Split name="&T;tChest_dome2_1" text="Chest Dome 2"/>
+    <Split name="&T;tChest_dome3_1" text="Chest Dome 3"/>
+    <Split name="&T;tChest_dome4_1" text="Chest Dome 4"/>
+    <Split name="&T;tChest_domeOob1_1" text="Chest Dome OOB"/>
+  </Parent>
+  <Parent name="DormArea" text="Leisure Area">
+    <Split name="&T;tChest_dormarea1_1" text="Chest Leisure Area 1"/>
+    <Split name="&T;tChest_dormarea2_1" text="Chest Leisure Area 2"/>
+    <Split name="&T;tChest_dormarea3_1" text="Chest Leisure Area 3"/>
+    <Split name="&T;tChest_dormarea4_1" text="Chest Leisure Area 4"/>
+    <Split name="&T;tChest_library_1f_1_1" text="Chest Library"/>
+    <Split name="&T;tChest_dorm_1f_1" text="Chest Dormitory 1F 1"/>
+    <Split name="&T;tChest_dorm_1f_2_1" text="Chest Dormitory 1F 2"/>
+    <Split name="&T;tChest_dorm_2f_1" text="Chest Dormitory 2F"/>
+    <Split name="&T;tChest_dorm_b1f_1" text="Chest Dormitory Basement"/>
+  </Parent>
+  <Parent name="Forest" text="Forest">
+    <Split name="&T;tChest_forest1_1" text="Chest Forest 1"/>
+    <Split name="&T;tChest_forest2_1" text="Chest Forest 2"/>
+    <Split name="&T;tChest_forest3_1" text="Chest Forest 3"/>
+    <Split name="&T;tChest_forest4_1" text="Chest Forest 4"/>
+    <Split name="&T;tChest_forest5_1" text="Chest Forest 5"/>
+    <Split name="&T;tChest_forest6_1" text="Chest Forest 6"/>
+    <Split name="&T;tChest_forest7_1" text="Chest Forest 7"/>
+    <Split name="&T;tChest_forest8_1" text="Chest Forest 8"/>
+    <Split name="&T;tChest_forest9_1" text="Chest Forest 9"/>
+    <Split name="&T;tChest_forest10_1" text="Chest Forest 10"/>
+    <Split name="&T;tChest_forest11_1" text="Chest Forest 11"/>
+    <Split name="&T;tChest_forest12_1" text="Chest Forest 12"/>
+    <Split name="&T;tChest_forest13_1" text="Chest Forest 13"/>
+    <Split name="&T;tChest_forest14_1" text="Chest Forest 14"/>
+    <Split name="&T;tChest_forestOob1_1" text="Chest Forest OOB"/>
+    <Split name="&T;tChest_lab_court1_1" text="Chest Laboratory 1"/>
+    <Split name="&T;tChest_lab_court2_1" text="Chest Laboratory 2"/>
+    <Split name="&T;tChest_lab_court3_1" text="Chest Laboratory 3"/>
+  </Parent>
+  <Parent name="Parkinglot" text="Parking Lot">
+    <Split name="&T;tChest_parkinglot1_1" text="Chest Parking Lot 1"/>
+    <Split name="&T;tChest_parkinglot2_1" text="Chest Parking Lot 2"/>
+    <Split name="&T;tChest_parkinglot3_1" text="Chest Parking Lot 3"/>
+    <Split name="&T;tChest_parkinglot4_1" text="Chest Parking Lot 4"/>
+    <Split name="&T;tChest_parkinglotOob1_1" text="Chest Parking Lot OOB"/>
+    <Split name="&T;tChest_tony1_1" text="Chest Big Tony's Den"/>
+  </Parent>
+  <Parent name="MtDodji" text="Mount Dodji">
+    <Split name="&T;tChest_mountain1_1" text="Chest Mt. Dodji 1"/>
+    <Split name="&T;tChest_mountain2_1" text="Chest Mt. Dodji 2"/>
+    <Split name="&T;tChest_mountain3_1" text="Chest Mt. Dodji 3"/>
+    <Split name="&T;tChest_mountain4_1" text="Chest Mt. Dodji 4"/>
+    <Split name="&T;tChest_mountain5_1" text="Chest Mt. Dodji 5"/>
+    <Split name="&T;tChest_mountain6_1" text="Chest Mt. Dodji 6"/>
+    <Split name="&T;tChest_mountain7_1" text="Chest Mt. Dodji 7"/>
+    <Split name="&T;tChest_mountain8_1" text="Chest Mt. Dodji 8"/>
+    <Split name="&T;tChest_mountain9_1" text="Chest Mt. Dodji 9"/>
+    <Split name="&T;tChest_mountain10_1" text="Chest Mt. Dodji 10"/>
+    <Split name="&T;tChest_mountain11_1" text="Chest Mt. Dodji 11"/>
+  </Parent>
 </Splits>
