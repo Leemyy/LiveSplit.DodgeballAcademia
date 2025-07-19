@@ -21,6 +21,14 @@ namespace LiveSplit.DodgeballAcademia {
         public Pointer<int> TitleItemSelected { get; private set; }
         public Pointer<bool> TitleClicking { get; private set; }
 
+        public Pointer<IntPtr> Match { get; private set; }
+        public Pointer<int> MatchMode { get; private set; }
+        public StringPointer MatchScript { get; private set; }
+        public Pointer<int> MatchWinner { get; private set; }
+        public Pointer<bool> MatchCanLose { get; private set; }
+        public Pointer<int> MatchMinigameDifficulty { get; private set; }
+        public Pointer<int> MatchMinigameRank { get; private set; }
+
         private UnityHelperTask unityTask;
         private ScanHelperTask scanTask;
 
@@ -51,7 +59,7 @@ namespace LiveSplit.DodgeballAcademia {
                     scanTask = null;
                 }
 
-                if(allocAddr != default) {
+                if(allocAddr != default && ((!game?.Process?.HasExited) ?? false)) {
                     game.Process.Suspend();
                     game.Write(loadBytes, loadAddr);
                     game.Write(updateBytes, updateAddr);
@@ -133,12 +141,23 @@ namespace LiveSplit.DodgeballAcademia {
 
             TransitionText = ptrFactory.MakeString(overworldDirector, unity.GetFieldOffset(directorClass, "transitionFade"), 0x38, 0x20, 0x10, ptrFactory.StringHeaderSize);
             TransitionText.StringType = EStringType.UTF16Sized;
-            
+
             var titleScreenList = ptrFactory.Make<IntPtr>(overworldDirector, unity.GetFieldOffset(directorClass, "titleScreen"), 0x28);
             var listClass = unity.FindClass("ListManager");
             TitleCanNavigate = ptrFactory.Make<bool>(titleScreenList, unity.GetFieldOffset(listClass, "canNavigate"));
             TitleItemSelected = ptrFactory.Make<int>(titleScreenList, unity.GetFieldOffset(listClass, "itemSelected"));
             TitleClicking = ptrFactory.Make<bool>(titleScreenList, unity.GetFieldOffset(listClass, "clicking"));
+
+            var matchDirectorStatic = ptrFactory.Make("DodgeballMatch.Director", out IntPtr matchClass);
+            Match = ptrFactory.Make<IntPtr>(matchDirectorStatic, "current");
+            MatchMode = ptrFactory.Make<int>(matchDirectorStatic, "gameModeArgument");
+            MatchWinner = ptrFactory.Make<int>(matchDirectorStatic, "resultsWinningTeam");
+            MatchCanLose = ptrFactory.Make<bool>(matchDirectorStatic, "canLoseArgument");
+            MatchScript = ptrFactory.MakeString(matchDirectorStatic, "battleScriptArgument", ptrFactory.StringHeaderSize);
+            MatchScript.StringType = EStringType.UTF16Sized;
+
+            MatchMinigameDifficulty = ptrFactory.Make<int>(matchDirectorStatic, "minigameDifficultyArgument");
+            MatchMinigameRank = ptrFactory.Make<int>(matchDirectorStatic, "resultsMinigameRank");
 
             logger.Log(ptrFactory.ToString());
 

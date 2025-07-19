@@ -20,9 +20,9 @@ namespace LiveSplit.DodgeballAcademia {
         }
 
         public override bool Split() {
-            const string T = "Tracker", TT = "TransitionText";
+            const string T = "Tracker", TT = "TransitionText", M = "Match";
 
-            return remainingSplits.Count() != 0 && (SplitTransitionText() || SplitTracker());
+            return remainingSplits.Count() != 0 && (SplitTransitionText() || SplitTracker() || SplitMatch());
 
             bool SplitTransitionText() {
                 if(!remainingSplits.ContainsKey(TT)
@@ -47,6 +47,47 @@ namespace LiveSplit.DodgeballAcademia {
                         return true;
                     }
                 }
+                return false;
+            }
+
+            bool SplitMatch() {
+                if(!remainingSplits.ContainsKey(M) || !memory.Match.Changed) {
+                    return false;
+                }
+
+                bool start = memory.Match.New != IntPtr.Zero;
+                int mode = memory.MatchMode.New;
+
+                if(mode != 0) {
+                    var key = "minigame_" + mode + "-" + memory.MatchMinigameDifficulty.New;
+                    if(start) {
+                        return remainingSplits.Split(M, key + "_start");
+                    }
+
+                    if(memory.MatchMinigameRank.New <= 0) {
+                        return false;
+                    }
+                    //Todo: splits for S ranks
+                    return remainingSplits.Split(M, key + "_end");
+                }
+
+                var script = memory.MatchScript.New;
+                if(script == null) {
+                    //Todo: splits for Underground Tournament matches
+                    return false;
+                }
+
+                if(start) {
+                    return remainingSplits.Split(M, script + "_start");
+                }
+
+                int winningTeam = memory.MatchWinner.New;
+                bool lossAllowed = memory.MatchCanLose.New;
+                if(winningTeam >= 0 && (lossAllowed || winningTeam == 0)) {
+                    //Todo: adjust names for Parking Lot matches in Ep.7
+                    return remainingSplits.Split(M, script + "_end");
+                }
+
                 return false;
             }
         }
